@@ -1,12 +1,11 @@
 @extends('layout')
 
-@section('title')Главная страница@endsection
+
 
 @section('main_content')
+<h1>{{$subject}}</h1>
 
-<h1>Головна сторінка</h1>
-
-@foreach($questions as $el)
+    @foreach($questions as $el)
         <div class="alert alert-warning">
             <h3>{{ $el->title }}</h3>
             <b>{{ $el->subject_show }}</b>
@@ -16,3 +15,5 @@
     @endforeach
 
 @endsection
+
+@section('title'){{$el->subject_show}}@endsection

@@ -15,7 +15,7 @@
         </div>
     @endif
 
-    <form method="post" action="/review/check">
+    <form method="post" action="{{route('contact')}}">
         @csrf
         <input type="email" name="email" id="email" placeholder="Введите email" class="form-control"><br>
         <input type="text" name="subject" id="subject" placeholder="Введите отзыв" class="form-control"><br>
